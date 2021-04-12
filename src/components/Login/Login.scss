@@ -1,0 +1,321 @@
+@import "../../Global/css/Variable.scss";
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: $color-primary-text;
+  // background-color: $color-green;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__poster {
+    background: url("https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+      $color-primary;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    position: relative;
+    transition: all 3s;
+    margin-top: -1.5rem;
+    &:nth-of-type(2) {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 3rem;
+    }
+  }
+  &__terms {
+    font-size: 1rem;
+    padding: 0 0 1rem;
+    a {
+      text-decoration: none;
+    }
+  }
+  > small {
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+      font-size: 2rem;
+      font-weight: 700;
+      background-color: #ccc;
+      margin-bottom: 2rem;
+      border-radius: 30px 30px;
+      padding: 0.5rem 1.5rem;
+      max-width: fit-content;
+      position: relative;
+      z-index: 0;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 4px;
+        left: 0;
+        border-radius: 30px 30px;
+        background-color: $color-white;
+        z-index: -1;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding: 2rem 1rem;
+      line-height: 1.5rem;
+      @media screen and (min-width: 768px) {
+        width: 400px;
+      }
+
+      > label {
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      .input__wrapper {
+        width: calc(100% - 5rem);
+        position: relative;
+      }
+      .country-code {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: absolute;
+        color: rgb(94, 92, 92);
+        top: 44px;
+        left: 1rem;
+      }
+      .cross-btn {
+        position: absolute;
+        left: calc(100% + 3rem);
+        top: 45px;
+        visibility: hidden;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          visibility: visible;
+        }
+      }
+      input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        padding-left: 4rem;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        border: 0;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        outline: none;
+        border: 1px solid transparent;
+        &:hover,
+        &:focus {
+          border: 1px solid $color-primary;
+        }
+        &:focus + .cross-btn {
+          visibility: visible;
+        }
+      }
+      button {
+        padding: 0.8rem 1rem;
+        border: 0;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: $color-primary;
+        color: $color-white;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        outline: 0;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          border: 0;
+          outline: 0;
+          opacity: 0.8;
+        }
+        &:disabled {
+          background-color: ghostwhite;
+          color: gray;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  &__verify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    @media screen and(min-width:768px) {
+      justify-content: center;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 0;
+      > input {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 8px;
+        border: 0;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        outline: none;
+        border: 2px solid transparent;
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+        @media screen and (min-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+        &:hover,
+        &:focus {
+          border: 2px solid $color-primary;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100px;
+      background-color: rgb(173, 230, 173);
+      border-radius: 50%;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+    &-msg {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+  &__error {
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    &.invalid {
+      background-color: lightcoral;
+    }
+    > p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+  }
+}
+.flex-none {
+  animation: flexnone 0.5s ease-out;
+}
+@keyframes flexnone {
+  from {
+    flex: 1;
+  }
+  to {
+    flex: none;
+  }
+}
+
+.flex-auto {
+  animation: flexauto 0.5s ease-in forwards;
+}
+@keyframes flexauto {
+  from {
+    flex: none;
+  }
+  to {
+    flex: 1;
+  }
+}
+.filled {
+  background-color: $color-primary;
+  color: $color-white;
+}
+.resend-otp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-loading {
+  background: repeating-linear-gradient(
+    -45deg,
+    $color-primary,
+    $color-primary 20px,
+    #b4e2f7 20px,
+    #b4e2f7 40px
+  );
+  background-size: 56px 56px; /* This is unique for this background, need to find a pattern and develop a formula */
+  background-position-x: 0%;
+  -webkit-animation: slide 20s infinite linear forwards;
+  animation: slide 20s infinite linear forwards;
+}
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px #c4a300;
+  }
+  40% {
+    box-shadow: 0 0 20px #c4a300;
+  }
+  60% {
+    box-shadow: 0 0 20px #c4a300;
+  }
+  100% {
+    box-shadow: 0 0 -10px #c4a300;
+  }
+}
+.button-glow {
+  animation: glowing 5000ms infinite;
+}

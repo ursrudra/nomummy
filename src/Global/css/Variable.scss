@@ -1,0 +1,51 @@
+// colors
+$color-primary: #22bbff;
+$color-white: #ffffff;
+$color-primary-text: #444;
+$color-green:#00e676;
+
+.ml {
+  margin-left: 1rem;
+}
+.order-1 {
+  order: 1;
+}
+.enable {
+  color: $color-primary;
+  cursor: pointer;
+}
+.disable {
+  color: #dddddd;
+  cursor: not-allowed;
+}
+.btn {
+  padding: 0.8rem 1rem;
+  border: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  outline: 0;
+  &:hover,
+  &:focus {
+    border: 0;
+    outline: 0;
+    opacity: 0.8;
+  }
+  &:disabled {
+    background-color: ghostwhite;
+    color: gray;
+    cursor: not-allowed;
+  }
+  &-cta {
+    background-color: $color-primary;
+    color: $color-white;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  }
+  &-link {
+    text-transform: capitalize;
+  }
+}

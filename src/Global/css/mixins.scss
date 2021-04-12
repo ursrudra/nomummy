@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin input {
+  border: 0;
+  border-radius: 4px;
+  padding: 1rem;
+  @include boxshadow();
+  &::placeholder {
+    text-transform: capitalize;
+    color: $secondary-text-color;
+  }
+}
+
+@mixin boxshadow {
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}

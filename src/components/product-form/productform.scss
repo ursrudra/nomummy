@@ -1,0 +1,59 @@
+@import "../../Global/css/variables.scss";
+.product-form {
+  background-color: #eeeeee;
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+
+  &__image {
+    height: 200px;
+    width: 200px;
+    padding: 0.5rem;
+    background: url(./150.png) $primary-color-text;
+
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__container {
+    display: block;
+    width: 100%;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    > label {
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 0.8rem 0;
+    }
+    input,
+    select {
+      padding: 0.8rem 0.5rem;
+      border: 0;
+      &:focus {
+        outline-color: #22bbff;
+      }
+    }
+  }
+  fieldset {
+    border: 0;
+    > legend {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  &__cta {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-left: auto;
+    float: right;
+    border: 0;
+    background-color: $color-1;
+    color: $primary-color-text;
+  }
+}

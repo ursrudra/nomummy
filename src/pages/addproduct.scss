@@ -1,0 +1,13 @@
+.add-product {
+  display: flex;
+  .product {
+    &__categories-container {
+      width: 55%;
+      max-height: 600px;
+      overflow: auto;
+    }
+    &__form-container {
+      width: 45%;
+    }
+  }
+}

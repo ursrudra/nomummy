@@ -1,0 +1,22 @@
+@import "../../Global/css/variables.scss";
+@import "../../Global/css/mixins.scss";
+
+.product-card {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  background-color: $primary-color-text;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  width: 150px;
+  margin: 10px;
+  // @include boxshadow();
+  &__header {
+    height: 100px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
